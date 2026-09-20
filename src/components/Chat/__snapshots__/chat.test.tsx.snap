@@ -1,0 +1,24 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Chat component > Snapshot 1`] = `
+<div>
+  <section
+    class="_chat_088558 _chat_empty_088558"
+  >
+    <div
+      class="_chat__emptyMessage_088558"
+    >
+      <h2
+        class="_chat__emptyTitle_088558"
+      >
+        Создайте чат
+      </h2>
+      <p
+        class="_chat__emptyText_088558"
+      >
+        Создайте чат по номеру телефона, чтобы начать диалог
+      </p>
+    </div>
+  </section>
+</div>
+`;

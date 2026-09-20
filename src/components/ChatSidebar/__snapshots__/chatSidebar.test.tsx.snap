@@ -1,0 +1,50 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Chat Sidebar component > Snapshot 1`] = `
+<div>
+  <aside
+    class="_chatSidebar_8deaac"
+  >
+    <header
+      class="_chatSidebar__header_8deaac"
+    >
+      <h1
+        class="_chatSidebar__title_8deaac"
+      >
+        Чаты
+      </h1>
+      <p
+        class="_chatSidebar__subtitle_8deaac"
+      >
+        GREEN-API для MAX
+      </p>
+    </header>
+    <form
+      class="_chatSidebar__form_8deaac"
+    >
+      <label
+        class="_chatSidebar__field_8deaac"
+      >
+        <span
+          class="_chatSidebar__label_8deaac"
+        >
+          Номер телефона
+        </span>
+        <input
+          class="_chatSidebar__input_8deaac"
+          inputmode="numeric"
+          placeholder="79991234567"
+          type="tel"
+          value=""
+        />
+      </label>
+      <button
+        class="_chatSidebar__button_8deaac"
+        type="submit"
+      >
+        Создать чат
+      </button>
+    </form>
+  </aside>
+</div>
+`;

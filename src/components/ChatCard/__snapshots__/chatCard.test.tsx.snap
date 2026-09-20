@@ -1,0 +1,23 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Chat Card component > Snapshot 1`] = `
+<div>
+  <button
+    class="_chatCard_ae4d87 _chatCard_active_ae4d87"
+    type="button"
+  >
+    <span
+      class="_chatCard__avatar_ae4d87"
+    />
+    <span
+      class="_chatCard__body_ae4d87"
+    >
+      <span
+        class="_chatCard__phone_ae4d87"
+      >
+        79991234567
+      </span>
+    </span>
+  </button>
+</div>
+`;

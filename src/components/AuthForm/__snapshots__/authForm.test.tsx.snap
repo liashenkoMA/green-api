@@ -1,0 +1,70 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Auth Form component > Snapshot 1`] = `
+<div>
+  <main
+    class="_auth_fca91c"
+  >
+    <form
+      class="_auth__form_fca91c"
+    >
+      <div
+        class="_auth__header_fca91c"
+      >
+        <h1
+          class="_auth__title_fca91c"
+        >
+          MAX Chat
+        </h1>
+        <p
+          class="_auth__description_fca91c"
+        >
+          Введите данные вашего инстанса GREEN-API
+        </p>
+      </div>
+      <div
+        class="_auth__fields_fca91c"
+      >
+        <label
+          class="_auth__field_fca91c"
+        >
+          <span
+            class="_auth__label_fca91c"
+          >
+            idInstance
+          </span>
+          <input
+            class="_auth__input_fca91c"
+            name="idInstance"
+            placeholder="Введите idInstance"
+            type="text"
+            value=""
+          />
+        </label>
+        <label
+          class="_auth__field_fca91c"
+        >
+          <span
+            class="_auth__label_fca91c"
+          >
+            apiTokenInstance
+          </span>
+          <input
+            class="_auth__input_fca91c"
+            name="apiTokenInstance"
+            placeholder="Введите apiTokenInstance"
+            type="password"
+            value=""
+          />
+        </label>
+      </div>
+      <button
+        class="_auth__button_fca91c"
+        type="submit"
+      >
+        Подключиться
+      </button>
+    </form>
+  </main>
+</div>
+`;

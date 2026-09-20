@@ -1,0 +1,50 @@
+@use "../../styles/variables" as v;
+
+.chatCard {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  width: 100%;
+  padding: 12px;
+  text-align: left;
+  background: v.$color-surface;
+  border: 0;
+  border-radius: 12px;
+  cursor: pointer;
+
+  &_active {
+    background: v.$color-chat-background;
+  }
+
+  &__avatar {
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    font-size: v.$font-size-md;
+    font-weight: v.$font-weight-semibold;
+    line-height: v.$line-height-md;
+    color: v.$color-white;
+    background: v.$color-primary;
+    border-radius: 50%;
+  }
+
+  &__body {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+  }
+
+  &__phone {
+    overflow: hidden;
+    font-size: v.$font-size-sm;
+    font-weight: v.$font-weight-semibold;
+    line-height: v.$line-height-sm;
+    color: v.$color-text-primary;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+}

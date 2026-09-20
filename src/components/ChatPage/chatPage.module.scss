@@ -1,0 +1,19 @@
+@use "../../styles/variables" as v;
+
+.chatPage {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  background: v.$color-surface;
+}
+
+@media (min-width: v.$breakpoint-tablet) {
+  .chatPage {
+    flex-direction: row;
+    height: 100vh;
+    height: 100dvh;
+    min-height: 0;
+    overflow: hidden;
+  }
+}

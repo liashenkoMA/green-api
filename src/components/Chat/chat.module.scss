@@ -1,0 +1,243 @@
+@use "../../styles/variables" as v;
+
+.chat {
+  display: flex;
+  width: 100%;
+  min-width: 0;
+  min-height: 560px;
+  flex-direction: column;
+  background: v.$color-chat-background;
+
+  &_empty {
+    align-items: center;
+    justify-content: center;
+    min-height: 480px;
+    padding: 16px;
+  }
+
+  &__header {
+    display: flex;
+    flex: none;
+    gap: 12px;
+    align-items: center;
+    min-height: 64px;
+    padding: 10px 16px;
+    background: v.$color-surface;
+    border-bottom: 1px solid v.$color-border;
+  }
+
+  &__avatar {
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    font-size: v.$font-size-md;
+    font-weight: v.$font-weight-semibold;
+    line-height: v.$line-height-md;
+    color: v.$color-white;
+    background: v.$color-primary;
+    border-radius: 50%;
+  }
+
+  &__title {
+    font-size: v.$font-size-md;
+    font-weight: v.$font-weight-semibold;
+    line-height: v.$line-height-md;
+    color: v.$color-text-primary;
+  }
+
+  &__status {
+    font-size: v.$font-size-xs;
+    font-weight: v.$font-weight-regular;
+    line-height: v.$line-height-xs;
+    color: v.$color-text-secondary;
+  }
+
+  &__body {
+    display: flex;
+    min-height: 0;
+    flex: 1;
+    flex-direction: column;
+    padding: 16px;
+    overflow-y: auto;
+  }
+
+  &__emptyMessage,
+  &__noMessages {
+    padding: 10px 16px;
+    text-align: center;
+    background: v.$color-surface;
+    border-radius: 14px;
+  }
+
+  &__emptyTitle {
+    font-size: v.$font-size-md;
+    font-weight: v.$font-weight-semibold;
+    line-height: v.$line-height-md;
+    color: v.$color-text-primary;
+  }
+
+  &__emptyText,
+  &__noMessages {
+    font-size: v.$font-size-sm;
+    font-weight: v.$font-weight-regular;
+    line-height: v.$line-height-sm;
+    color: v.$color-text-secondary;
+  }
+
+  &__emptyText {
+    margin-top: 4px;
+  }
+
+  &__noMessages {
+    align-self: center;
+    margin: auto 0;
+  }
+
+  &__messageList {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: flex-end;
+    padding-bottom: 16px;
+  }
+
+  &__message {
+    max-width: 85%;
+    padding: 10px 14px;
+    font-size: v.$font-size-sm;
+    font-weight: v.$font-weight-regular;
+    line-height: v.$line-height-sm;
+    border-radius: 14px;
+
+    &_outgoing {
+      align-self: flex-end;
+      color: v.$color-white;
+      background: v.$color-primary;
+      border-bottom-right-radius: 4px;
+    }
+
+    &_incoming {
+      align-self: flex-start;
+      color: v.$color-text-primary;
+      background: v.$color-surface;
+      border-bottom-left-radius: 4px;
+    }
+  }
+
+  &__messageForm {
+    display: flex;
+    flex: none;
+    gap: 6px;
+    width: 100%;
+    padding: 8px;
+    margin: 0 auto;
+    background: v.$color-surface;
+    border-radius: 16px;
+  }
+
+  &__messageInput {
+    width: 100%;
+    min-width: 0;
+    height: 44px;
+    padding: 0 14px;
+    font-size: v.$font-size-md;
+    font-weight: v.$font-weight-regular;
+    line-height: v.$line-height-md;
+    color: v.$color-text-primary;
+    background: v.$color-surface;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    outline: none;
+
+    &::placeholder {
+      color: v.$color-text-secondary;
+    }
+
+    &:focus {
+      border-color: v.$color-primary;
+    }
+  }
+
+  &__sendButton {
+    flex: none;
+    height: 44px;
+    padding: 0 12px;
+    font-size: v.$font-size-sm;
+    font-weight: v.$font-weight-semibold;
+    line-height: v.$line-height-sm;
+    color: v.$color-white;
+    background: v.$color-primary;
+    border: 0;
+    border-radius: 12px;
+    cursor: pointer;
+
+    &:hover {
+      background: v.$color-primary-hover;
+    }
+  }
+
+  &__error {
+    padding-bottom: 5px;
+    font-size: v.$font-size-sm;
+    font-weight: v.$font-weight-regular;
+    line-height: v.$line-height-sm;
+    color: v.$color-error;
+    text-align: center;
+  }
+}
+
+@media (min-width: v.$breakpoint-tablet) {
+  .chat {
+    flex: 1;
+    width: auto;
+    min-height: 0;
+
+    &_empty {
+      min-height: 0;
+      padding: 20px;
+    }
+
+    &__header {
+      min-height: 68px;
+      padding: 10px 20px;
+    }
+
+    &__body {
+      padding: 20px;
+    }
+
+    &__message {
+      max-width: 70%;
+    }
+
+    &__messageForm {
+      gap: 10px;
+      width: min(100%, 760px);
+    }
+
+    &__sendButton {
+      padding: 0 18px;
+    }
+  }
+}
+
+@media (min-width: v.$breakpoint-desktop) {
+  .chat {
+    &__header {
+      min-height: 72px;
+      padding: 10px 24px;
+    }
+
+    &__body {
+      padding: 24px;
+    }
+
+    &__message {
+      max-width: 60%;
+    }
+  }
+}

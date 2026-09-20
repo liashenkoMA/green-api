@@ -1,0 +1,25 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Chat Page component > Snapshot 1`] = `
+<div>
+  <main
+    class="_chatPage_57800b"
+  >
+    <div>
+      <span>
+        Сайдбар: 
+        пусто
+      </span>
+      <button
+        type="button"
+      >
+        Создать тестовый чат
+      </button>
+    </div>
+    <div>
+      Чат: 
+      пусто
+    </div>
+  </main>
+</div>
+`;
