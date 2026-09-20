@@ -1,75 +1,108 @@
-# React + TypeScript + Vite
+# MAX Chat
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Тестовое задание — простой чат для отправки и получения текстовых сообщений в MAX через GREEN-API.
 
-Currently, two official plugins are available:
+## Стек
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React
+- TypeScript
+- Vite
+- SCSS Modules
+- Vitest
+- React Testing Library
 
-## React Compiler
+## Возможности
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- подключение к GREEN-API по `idInstance` и `apiTokenInstance`;
+- проверка состояния инстанса;
+- создание чата по номеру телефона;
+- отправка текстовых сообщений в MAX;
+- получение входящих текстовых сообщений;
+- отображение исходящих и входящих сообщений в интерфейсе.
 
-## Expanding the ESLint configuration
+## Требования
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Для локального запуска необходимы:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Node.js;
+- npm;
+- аккаунт GREEN-API;
+- созданный и авторизованный инстанс GREEN-API для MAX.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Локальный запуск
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Клонировать репозиторий:
 
+```bash
+git clone git@github.com:liashenkoMA/test.git
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+Перейти в директорию проекта:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+cd test
 ```
+
+Установить зависимости:
+
+```bash
+npm install
+```
+
+Запустить приложение:
+
+```bash
+npm run dev
+```
+
+После запуска Vite выведет адрес локального сервера, например:
+
+```text
+http://localhost:5173
+```
+
+Откройте его в браузере.
+
+## Настройка GREEN-API
+
+Для работы приложения необходимы данные инстанса GREEN-API:
+
+- `idInstance`;
+- `apiTokenInstance`.
+
+Их можно получить в личном кабинете GREEN-API после создания и авторизации инстанса MAX.
+
+При запуске приложения введите эти данные в форму подключения.
+
+Учетные данные не сохраняются в `localStorage` и используются только во время текущей сессии приложения.
+
+## Проверка работы
+
+1. Введите `idInstance` и `apiTokenInstance`.
+2. Нажмите **«Подключиться»**.
+3. Введите номер телефона получателя в международном формате.
+4. Нажмите **«Создать чат»**.
+5. Введите текст сообщения и нажмите **«Отправить»**.
+6. Сообщение должно появиться у получателя в MAX.
+7. Ответьте на сообщение со стороны получателя.
+8. Ответ появится в интерфейсе приложения.
+
+## Тесты
+
+Запуск тестов:
+
+```bash
+npm run test:run
+```
+
+## Сборка
+
+Проверить production-сборку:
+
+```bash
+npm run build
+```
+
+## Примечание
+
+Приложение реализовано в рамках требований тестового задания. История переписки не сохраняется после перезагрузки страницы.
