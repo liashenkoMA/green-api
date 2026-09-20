@@ -34,13 +34,13 @@
 Клонировать репозиторий:
 
 ```bash
-git clone git@github.com:liashenkoMA/test.git
+git clone git@github.com:liashenkoMA/green-api.git
 ```
 
 Перейти в директорию проекта:
 
 ```bash
-cd test
+cd green-api
 ```
 
 Установить зависимости:
