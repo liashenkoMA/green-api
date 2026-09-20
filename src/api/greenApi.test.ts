@@ -27,7 +27,7 @@ globalThis.fetch = vi.fn();
 describe("Green API", () => {
   const mockFetch = fetch as MockedFunction<typeof fetch>;
 
-  const apiUrl = "https://3100.api.green-api.com";
+  const apiUrl = "https://api.green-api.com";
 
   const mockCredentials: IGreenApiCredentials = {
     idInstance: "123456789",

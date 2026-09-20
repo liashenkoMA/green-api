@@ -8,7 +8,7 @@ import type {
   IStateInstanceResponse,
 } from "../interface/greenApi";
 
-const apiUrl = "https://3100.api.green-api.com";
+const apiUrl = "https://api.green-api.com";
 
 export async function getStateInstance(
   credentials: IGreenApiCredentials,
